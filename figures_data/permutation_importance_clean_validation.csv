@@ -1,0 +1,39 @@
+branch,feature,mean_decrease,std,baseline,metric,n_rows,n_repeats
+main,m_norm,0.03214929969693703,0.008438808176104604,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,db_at_event,0.02578450282940602,0.01897363164572835,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,local_mean_db,0.011771880255090628,0.004619837362137327,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,local_std_db,0.009087568032125654,0.003352521485843873,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,pre_mean_db,0.11142077093308558,0.01551620697068884,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,post_mean_db,0.014405900432275003,0.0036276285179368865,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,loss_dB,0.026604440808235107,0.01123437955756097,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,peak_above_bg_dB,0.019357731445195113,0.008140896398706337,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,pre_slope_dB_per_km,0.009045551953464936,0.008003163270107567,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,post_slope_dB_per_km,0.005814987694535539,0.004544031126720436,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,slope_change_dB_per_km,0.007468047936079697,0.004723593692872493,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,derivative_at_event_dB_per_km,0.019901284081667713,0.008321351370911776,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,max_pre_derivative,0.1475255193875124,0.03213771080554344,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,min_post_derivative,0.005913610063624097,0.006442343208190194,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,pre_std_db,0.3220607996440055,0.026770180982358525,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,post_std_db,0.008505963216058465,0.004750071708897443,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,post_to_pre_std_ratio,0.003571269705704494,0.003696066547743028,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,peak_width_m,0.010037246776746372,0.007142654468781,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+main,local_range_db,0.0011788423390623748,0.004472811766912933,0.8637958532695376,"validation candidate-level macro-F1 over {connector, break} (argmax, conf>=0.50)",3794,20
+bend,m_norm,0.022923328689363497,0.00856428539677986,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,db_at_event,0.07056860583360584,0.01549741373102226,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,local_mean_db,0.29111502073361845,0.03850301985501077,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,local_std_db,0.22636420566759688,0.033065911202464195,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,pre_mean_db,0.3884900900738608,0.04447476448160158,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,post_mean_db,0.3872769510653101,0.048242049773532344,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,loss_dB,0.21303648944015618,0.03338102535998256,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,peak_above_bg_dB,0.027188730197568595,0.012304626468572855,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,pre_slope_dB_per_km,0.02760706126786606,0.008542110842078763,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,post_slope_dB_per_km,0.01942127493139103,0.007335436595565498,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,slope_change_dB_per_km,0.021291927121855063,0.006605973761885722,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,derivative_at_event_dB_per_km,0.009848638653685644,0.005810049402343391,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,max_pre_derivative,0.22964932003642202,0.03704138878762085,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,min_post_derivative,0.02293557411397081,0.010124014052435182,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,pre_std_db,0.28483766877881866,0.0402889082975122,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,post_std_db,0.30605009594411103,0.04659935782970014,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,post_to_pre_std_ratio,0.009665035848814386,0.003249669654134037,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,peak_width_m,0.00600877277157838,0.005534254339212142,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
+bend,local_range_db,0.23684843392674626,0.034756507188424726,0.9690721649484536,"validation window-level F1 of 'bend' at threshold 0.75 (sampled windows, seed 43)",1569,20
