@@ -2,7 +2,7 @@
 
 Companion repository of the manuscript **"A Hybrid Machine Learning System for Low-Cost, Interpretable Bend, Connector, and Break Detection in OTDR Traces"** (Applied Sciences, MDPI; manuscript ID applsci-4616678).
 
-- Authors: [to be filled in]
+- Authors: Ilyas Kazambaev, Magzhan Amangeldi
 - Full reproduction package (dataset, split, pipeline, reference results): Zenodo, DOI [10.5281/zenodo.XXXXXXX]
 - Licence: [to be chosen by the authors]
 
@@ -17,6 +17,10 @@ Companion repository of the manuscript **"A Hybrid Machine Learning System for L
 | `figures_data/` | All data the figures are drawn from: training feature tables (box plots), validation and test result tables, three raw traces (Figure 3) |
 | `make_figures.py` | Regenerates every figure (Figure 4 is the pipeline diagram) from `figures_data/` with the Palatino Linotype font at 300 dpi |
 | `verify_boxplots.py` | Recomputes all box-plot statistics and checks them against the data → `boxplot_statistics.csv` |
+| `BENCHMARK.md` | Benchmark: detection accuracy (test set, ablations, tolerance) and computational cost (model size, latency per trace, memory) |
+| `benchmark.py` | Runs the benchmark on any device (incl. Raspberry Pi) → `benchmark_results/*.json` |
+| `benchmark_data/` | The 81 test traces with their reference masks and the test part of the split manifest |
+| `benchmark_results/` | Benchmark results; reference run on a cloud VM |
 | `code/` | Pipeline scripts used for the reported results (`run_group_file.py`, `train_and_test_bend_detector_full.py`, `otdr_common.py`, `analyze_clean_validation.py`, `visFigures_original.py`); to run them, use the Zenodo package, which also contains the data |
 
 ## Operating point of the models
@@ -35,6 +39,20 @@ b = joblib.load("models/bend_model.joblib")          # only load trusted files
 X = pd.DataFrame(rows)[b["features"]]                # rows: dicts produced by extract_features()
 p_bend = b["model"].predict_proba(X)[:, list(b["model"].classes_).index("bend")]
 ```
+
+## Benchmark
+
+`python benchmark.py` recomputes the test accuracy from the raw traces with the saved models; it must equal the published values. It also measures the inference cost on the current device. Full tables and protocol: [BENCHMARK.md](BENCHMARK.md).
+
+| Test set (81 traces, 227 events, ±5 m) | Precision | Recall | F1 |
+|---|---|---|---|
+| All events, pooled | 0.9175 | 0.7841 | 0.8456 |
+| All events, inverse-group-size weighted | 0.9489 | 0.7900 | 0.8622 |
+
+| Device | Latency per trace (median, 1 core) | Throughput | Peak memory |
+|---|---|---|---|
+| Intel Xeon 2.8 GHz, 2 vCPU (cloud VM) | 322 ms | 3.0 traces/s | 242 MB |
+| Raspberry Pi 4 (8 GB) | not measured yet – run `benchmark.py` on the device | | |
 
 ## Feature box plots (Figures 10 and 11)
 
@@ -59,4 +77,4 @@ Figure 3 uses the raw traces `class1_2026_04_27_14_37_34`, `class2_2026_04_27_15
 
 ## Citation
 
-[Authors]. A Hybrid Machine Learning System for Low-Cost, Interpretable Bend, Connector, and Break Detection in OTDR Traces. Applied Sciences, [year, volume, article number, DOI – after publication].
+Kazambaev, I.; Amangeldi, M.; [other co-authors]. A Hybrid Machine Learning System for Low-Cost, Interpretable Bend, Connector, and Break Detection in OTDR Traces. Applied Sciences, [year, volume, article number, DOI – after publication].

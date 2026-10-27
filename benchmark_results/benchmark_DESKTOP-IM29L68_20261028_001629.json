@@ -1,0 +1,222 @@
+{
+  "environment": {
+    "date": "2026-10-28T00:15:14",
+    "machine": "AMD64",
+    "processor": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.15",
+    "cpu_count": 12,
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "sklearn": "1.9.0",
+    "cpu_model": "AMD64 Family 25 Model 97 Stepping 2, AuthenticAMD"
+  },
+  "models": {
+    "main_model": {
+      "file_MB": 26.392605,
+      "load_s": 0.09197200008202344,
+      "n_estimators": 500,
+      "total_nodes": 270710,
+      "n_features": 19,
+      "classes": [
+        "background",
+        "bend",
+        "break",
+        "connector"
+      ]
+    },
+    "bend_model": {
+      "file_MB": 14.780797,
+      "load_s": 0.07670159998815507,
+      "n_estimators": 500,
+      "total_nodes": 181138,
+      "n_features": 19,
+      "classes": [
+        "bend",
+        "non_bend"
+      ]
+    }
+  },
+  "timing": {
+    "n_jobs=-1": {
+      "parse": {
+        "mean_ms": 2.8544530850248755,
+        "median_ms": 0.8041999535635114,
+        "p95_ms": 7.383480062708256,
+        "max_ms": 28.50460004992783
+      },
+      "main_features": {
+        "mean_ms": 30.942080661255883,
+        "median_ms": 29.804799938574433,
+        "p95_ms": 40.020539972465485,
+        "max_ms": 55.904600070789456
+      },
+      "main_classifier": {
+        "mean_ms": 55.335841148348194,
+        "median_ms": 57.37100006081164,
+        "p95_ms": 69.41291004186496,
+        "max_ms": 91.96860005613416
+      },
+      "bend_features": {
+        "mean_ms": 41.04571029258348,
+        "median_ms": 39.43780006375164,
+        "p95_ms": 49.13266996154561,
+        "max_ms": 65.14449999667704
+      },
+      "bend_classifier": {
+        "mean_ms": 60.455696707123835,
+        "median_ms": 58.694500010460615,
+        "p95_ms": 71.851460065227,
+        "max_ms": 108.9550000615418
+      },
+      "postprocess": {
+        "mean_ms": 0.023617696614913,
+        "median_ms": 0.022699940018355846,
+        "p95_ms": 0.0344900181517005,
+        "max_ms": 0.062400009483098984
+      },
+      "total": {
+        "mean_ms": 190.65739959095117,
+        "median_ms": 187.16939992737025,
+        "p95_ms": 220.1157700153999,
+        "max_ms": 268.89419998042285
+      },
+      "throughput_traces_per_s": 5.2450101708376655,
+      "mean_candidates_per_trace": 93.18518518518519,
+      "mean_windows_per_trace": 199.0
+    },
+    "n_jobs=1": {
+      "parse": {
+        "mean_ms": 0.5686090571169623,
+        "median_ms": 0.5622999742627144,
+        "p95_ms": 0.6553499959409236,
+        "max_ms": 1.104300026781857
+      },
+      "main_features": {
+        "mean_ms": 31.02340987392935,
+        "median_ms": 30.181500012986362,
+        "p95_ms": 39.41594003699719,
+        "max_ms": 45.25830002967268
+      },
+      "main_classifier": {
+        "mean_ms": 20.663077780141386,
+        "median_ms": 20.289700012654066,
+        "p95_ms": 22.695820056833327,
+        "max_ms": 30.4558000061661
+      },
+      "bend_features": {
+        "mean_ms": 40.41341275653185,
+        "median_ms": 39.520899998024106,
+        "p95_ms": 45.151660079136484,
+        "max_ms": 50.590300001204014
+      },
+      "bend_classifier": {
+        "mean_ms": 22.9795765430655,
+        "median_ms": 22.672199993394315,
+        "p95_ms": 26.229920005425807,
+        "max_ms": 38.10789994895458
+      },
+      "postprocess": {
+        "mean_ms": 0.01715308720238292,
+        "median_ms": 0.017700018361210823,
+        "p95_ms": 0.02238004235550761,
+        "max_ms": 0.04039995837956667
+      },
+      "total": {
+        "mean_ms": 115.66523909798742,
+        "median_ms": 114.3654000479728,
+        "p95_ms": 126.04131995467469,
+        "max_ms": 147.82429998740554
+      },
+      "throughput_traces_per_s": 8.645639846495593,
+      "mean_candidates_per_trace": 93.18518518518519,
+      "mean_windows_per_trace": 199.0
+    }
+  },
+  "timing_note": "81 test traces x 3 repeats after one warm-up trace; wall-clock per trace",
+  "peak_rss_MB": NaN,
+  "accuracy": [
+    {
+      "level": "file",
+      "class": "bend",
+      "TP": 41.0,
+      "FP": 9.0,
+      "FN": 8.0,
+      "precision": 0.82,
+      "recall": 0.8367346938775511,
+      "f1": 0.8282828282828283
+    },
+    {
+      "level": "file",
+      "class": "connector",
+      "TP": 66.0,
+      "FP": 0.0,
+      "FN": 29.0,
+      "precision": 1.0,
+      "recall": 0.6947368421052632,
+      "f1": 0.8198757763975156
+    },
+    {
+      "level": "file",
+      "class": "break",
+      "TP": 71.0,
+      "FP": 7.0,
+      "FN": 12.0,
+      "precision": 0.9102564102564102,
+      "recall": 0.8554216867469879,
+      "f1": 0.8819875776397516
+    },
+    {
+      "level": "file",
+      "class": "ALL",
+      "TP": 178.0,
+      "FP": 16.0,
+      "FN": 49.0,
+      "precision": 0.9175257731958762,
+      "recall": 0.7841409691629956,
+      "f1": 0.845605700712589
+    },
+    {
+      "level": "group",
+      "class": "bend",
+      "TP": 14.25,
+      "FP": 1.5,
+      "FN": 2.75,
+      "precision": 0.9047619047619048,
+      "recall": 0.8382352941176471,
+      "f1": 0.8702290076335878
+    },
+    {
+      "level": "group",
+      "class": "connector",
+      "TP": 29.25,
+      "FP": 0.0,
+      "FN": 10.75,
+      "precision": 1.0,
+      "recall": 0.73125,
+      "f1": 0.8447653429602888
+    },
+    {
+      "level": "group",
+      "class": "break",
+      "TP": 28.391666666666666,
+      "FP": 2.375,
+      "FN": 5.608333333333333,
+      "precision": 0.9228060671722643,
+      "recall": 0.8350490196078431,
+      "f1": 0.8767370046320124
+    },
+    {
+      "level": "group",
+      "class": "ALL",
+      "TP": 71.89166666666668,
+      "FP": 3.875,
+      "FN": 19.10833333333333,
+      "precision": 0.9488561372635284,
+      "recall": 0.790018315018315,
+      "f1": 0.8621826903857686
+    }
+  ],
+  "accuracy_matches_published": true,
+  "accuracy_max_abs_diff": 1.1102230246251565e-16
+}
